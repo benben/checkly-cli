@@ -2,9 +2,9 @@
 
 case "$1" in
     "setup")
-	      npx @checkly/create-cli "${@:2}"
+	      node /checkly/cli/packages/create-cli/index.mjs "${@:2}"
 	      ;;
     *)
-	      npx @checkly/cli "$@"
+	      /checkly/cli/packages/cli/bin/run "$@"
 	      ;;
 esac
